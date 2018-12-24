@@ -4,11 +4,11 @@
   "description": "An advanced Crypto currency trading bot",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "build": "tsc",
     "test": "mocha --require ts-node/register test/**/*.ts"
   },
   "author": "Will Weatherill",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "commander": "^2.19.0",
     "gdax": "^0.8.0",
