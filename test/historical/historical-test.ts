@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import moment from 'moment'
 import { Historical, Candlestick } from '../../src/historical';
 
-describe('historical/Historical.getProductHistoricRates(product, start, end, interval)', () => {
+describe('historical/Historical.getProductHistoricRates(product, start, end, interval)', () => {    
     const oneMinute: number = 60
     const start: Date = moment('2018-10-31T17:48:52Z').toDate()
     const startPlusOneHour: Date = moment('2018-10-31T18:49:52Z').toDate()
@@ -10,7 +10,7 @@ describe('historical/Historical.getProductHistoricRates(product, start, end, int
     
     let historical: Historical;
 
-    before(async () => {
+    before(() => {
         historical = new Historical()
         expect(historical).to.not.be.null;
 
@@ -39,7 +39,8 @@ describe('historical/Historical.getProductHistoricRates(product, start, end, int
     })
 
     // happy path - 2 requests
-    it('should return historic rates that cover the period defined by start and startPlusOneDay', async () => {
+    it('should return historic rates that cover the period defined by start and startPlusOneDay',  async function ()  {       
+        this.timeout(5000)
         const oneDayHistoricRates: Array<Candlestick> = await historical.getProductHistoricRates('BTC-GBP', start, startPlusOneDay, oneMinute);
         expect(oneDayHistoricRates).to.not.be.null
         expect(oneDayHistoricRates).to.not.be.empty
