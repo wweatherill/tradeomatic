@@ -2,7 +2,13 @@
   "name": "@wweatherill/tradeomatic",
   "version": "1.0.0-alpha.1",
   "description": "A Crypto-currency trading bot",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "files": [
+    "/dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc",
     "test": "mocha --require ts-node/register test/**/*.ts"
