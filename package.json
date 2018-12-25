@@ -1,7 +1,7 @@
 {
-  "name": "cryptobot-advanced",
-  "version": "1.0.0",
-  "description": "An advanced Crypto currency trading bot",
+  "name": "@wweatherill/tradeomatic",
+  "version": "1.0.0-alpha.1",
+  "description": "A Crypto-currency trading bot",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
