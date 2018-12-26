@@ -11,7 +11,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "mocha --require ts-node/register test/**/*.ts"
+    "test": "mocha --require ts-node/register test/**/*.ts",
+    "start": "./dist/src/tradeomatic/start.js"
   },
   "author": "Will Weatherill",
   "license": "MIT",
